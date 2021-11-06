@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping(path = ["/issues"], produces = [MediaType.APPLICATION_JSON_VALUE])
+@RequestMapping(path = ["/issue"], produces = [MediaType.APPLICATION_JSON_VALUE])
 class IssuesResource {
 
     @GetMapping

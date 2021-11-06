@@ -1,0 +1,128 @@
+openapi: 3.0.0
+info:
+  title: Squiggly Demo API
+  version: v1
+servers:
+  - url: "http://localhost:8080/"
+    description: "Local development server"
+tags:
+  - name: issues
+    description: Everything about issues
+paths:
+  /issue:
+    get:
+      summary: Find a specific issue
+      operationId: findIssue
+      tags:
+        - issues
+      parameters:
+        # - name: query
+        #   in: query
+        #   required: true
+        #   description: The query used to find the issue
+        #   schema:
+        #     type: string
+        - name: fields
+          in: query
+          required: false
+          description: |
+            [Squiggly filter](https://github.com/bohnman/squiggly) used to define which properties should be included/excluded in response. No filtering will be applied if not set.
+          schema:
+            type: string
+          # example: "id,properties[priority]"
+      responses:
+        200:
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Issue"
+              examples:
+                ISSUE-1:
+                  value: |
+                    {
+                      "id": "ISSUE-1",
+                      "issueSummary": "Dragons Need Fed",
+                      "issueDetails": "I need my dragons fed pronto.",
+                      "reporter": {
+                        "firstName": "Daenerys",
+                        "lastName": "Targaryen"
+                      },
+                      "assignee": {
+                        "firstName": "Jorah",
+                        "lastName": "Mormont"
+                      },
+                      "actions": [
+                        {
+                          "type": "COMMENT",
+                          "text": "I'm going to let Daario get this one.",
+                          "user": {
+                            "firstName": "Jorah",
+                            "lastName": "Mormont"
+                          }
+                        },
+                        {
+                          "type": "CLOSE",
+                          "text": "All set.",
+                          "user": {
+                            "firstName": "Daario",
+                            "lastName": "Naharis"
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "priority": "1",
+                        "email": "motherofdragons@got.com"
+                      }
+                    }
+components:
+  schemas:
+    Issue:
+      required:
+        - id
+        - issueSummary
+        - issueDetails
+        - reporter
+        - assignee
+        - actions
+        - properties
+      properties:
+        id:
+          type: string
+        issueSummary:
+          type: string
+        issueDetails:
+          type: string
+        reporter:
+          $ref: "#/components/schemas/User"
+        assignee:
+          $ref: "#/components/schemas/User"
+        actions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Action"
+        properties:
+          type: object
+          additionalProperties:
+            type: string
+    User:
+      required:
+        - firstName
+        - lastName
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+    Action:
+      required:
+        - type
+        - text
+        - user
+      properties:
+        type:
+          type: string
+        text:
+          type: string
+        user:
+          $ref: "#/components/schemas/User"
