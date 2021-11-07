@@ -1,4 +1,4 @@
-package com.example.squigglydemo.cucumber.support
+package pl.tinylinden.squigglydemo.cucumber.support
 
 import wslite.rest.RESTClient
 

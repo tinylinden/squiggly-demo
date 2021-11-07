@@ -1,4 +1,4 @@
-package com.example.squigglydemo.cucumber
+package pl.tinylinden.squigglydemo.cucumber
 
 import io.cucumber.junit.Cucumber
 import io.cucumber.junit.CucumberOptions

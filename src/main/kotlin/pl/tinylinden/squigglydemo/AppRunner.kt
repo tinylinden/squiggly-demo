@@ -1,4 +1,4 @@
-package com.example.squigglydemo
+package pl.tinylinden.squigglydemo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

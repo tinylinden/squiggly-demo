@@ -40,7 +40,7 @@ Feature: Squiggly Demo API (v1) - GET /issue
       }
       """
 
-  Scenario: 002 - Only 'id' field is returned when fields filter is provided
+  Scenario: 002 - Only 'id' is returned when fields filter is provided
     Then GET '/issue' with 'id' fields filter should return
       """
       {

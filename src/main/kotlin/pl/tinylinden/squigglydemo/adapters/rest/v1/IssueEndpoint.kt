@@ -1,8 +1,8 @@
-package com.example.squigglydemo.adapter.rest.v1
+package pl.tinylinden.squigglydemo.adapters.rest.v1
 
-import com.example.squigglydemo.adapter.rest.v1.model.ActionDto
-import com.example.squigglydemo.adapter.rest.v1.model.IssueDto
-import com.example.squigglydemo.adapter.rest.v1.model.UserDto
+import pl.tinylinden.squigglydemo.adapters.rest.v1.model.ActionDto
+import pl.tinylinden.squigglydemo.adapters.rest.v1.model.IssueDto
+import pl.tinylinden.squigglydemo.adapters.rest.v1.model.UserDto
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
 

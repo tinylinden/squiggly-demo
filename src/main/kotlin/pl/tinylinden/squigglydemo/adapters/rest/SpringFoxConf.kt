@@ -1,4 +1,4 @@
-package com.example.squigglydemo.adapter.rest
+package pl.tinylinden.squigglydemo.adapters.rest
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

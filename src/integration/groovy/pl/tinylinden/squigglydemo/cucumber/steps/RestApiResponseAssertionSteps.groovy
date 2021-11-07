@@ -1,8 +1,9 @@
-package com.example.squigglydemo.cucumber.steps
+package pl.tinylinden.squigglydemo.cucumber.steps
 
-import com.example.squigglydemo.cucumber.support.RestApiAbility
+
 import io.cucumber.java.en.Then
 import org.skyscreamer.jsonassert.JSONAssert
+import pl.tinylinden.squigglydemo.cucumber.support.RestApiAbility
 
 class RestApiResponseAssertionSteps implements RestApiAbility {
 

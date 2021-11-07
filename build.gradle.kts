@@ -80,8 +80,8 @@ openApiGenerate {
     outputDir.set("$buildDir/generated/sources/openApiGenerate/kotlin/main")
     ignoreFileOverride.set("$rootDir/.openapi-generator-ignore")
     skipOperationExample.set(true)
-    apiPackage.set("com.example.squigglydemo.adapter.rest.v1")
-    modelPackage.set("com.example.squigglydemo.adapter.rest.v1.model")
+    apiPackage.set("pl.tinylinden.squigglydemo.adapters.rest.v1")
+    modelPackage.set("pl.tinylinden.squigglydemo.adapters.rest.v1.model")
     modelNameSuffix.set("Dto")
     additionalProperties.set(
         mapOf(
