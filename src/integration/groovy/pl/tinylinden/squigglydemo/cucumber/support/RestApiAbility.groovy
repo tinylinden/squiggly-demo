@@ -9,7 +9,7 @@ trait RestApiAbility {
     String executeGet(
             String path,
             Map<String, String> query,
-            String accept = "application/vnd.example.public.v1+json") {
+            String accept = "application/vnd.tinylinden.public.v1+json") {
         HTTP.get(
                 path: path,
                 query: query,

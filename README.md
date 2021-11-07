@@ -24,23 +24,23 @@ Squiggly Filter for Jackson [documentation](https://github.com/bohnman/squiggly/
 * All fields should be returned if no filter was provided
   ```
   curl -G http://localhost:8080/issue \
-    -H "Accept: application/vnd.example.public.v1+json"
+    -H "Accept: application/vnd.tinylinden.public.v1+json"
   ```
 * Only _id_ field should be returned
   ```
   curl -G http://localhost:8080/issue \
-    -H "Accept: application/vnd.example.public.v1+json" \
+    -H "Accept: application/vnd.tinylinden.public.v1+json" \
     --data-urlencode "fields=id"
   ```
 * All fields but _actions_ and _properties_ should be returned
   ```
   curl -G http://localhost:8080/issue \
-    -H "Accept: application/vnd.example.public.v1+json" \
+    -H "Accept: application/vnd.tinylinden.public.v1+json" \
     --data-urlencode "fields=-actions,-properties"
   ```
 * Only _id_ and _actions.type_ fields should be returned
   ```
   curl -G http://localhost:8080/issue \
-    -H "Accept: application/vnd.example.public.v1+json" \
+    -H "Accept: application/vnd.tinylinden.public.v1+json" \
     --data-urlencode "fields=id,actions[type]"
   ```

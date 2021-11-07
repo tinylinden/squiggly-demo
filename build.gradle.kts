@@ -12,7 +12,7 @@ plugins {
     id("org.openapi.generator") version "5.3.0"
 }
 
-group = "com.example"
+group = "pl.tinylinden"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 

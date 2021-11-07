@@ -27,7 +27,7 @@ paths:
         200:
           description: Expected response to a valid request
           content:
-            application/vnd.example.public.v1+json:
+            application/vnd.tinylinden.public.v1+json:
               schema:
                 $ref: "#/components/schemas/Issue"
               examples:
