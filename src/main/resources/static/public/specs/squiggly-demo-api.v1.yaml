@@ -16,12 +16,6 @@ paths:
       tags:
         - issues
       parameters:
-        # - name: query
-        #   in: query
-        #   required: true
-        #   description: The query used to find the issue
-        #   schema:
-        #     type: string
         - name: fields
           in: query
           required: false
@@ -29,12 +23,11 @@ paths:
             [Squiggly filter](https://github.com/bohnman/squiggly) used to define which properties should be included/excluded in response. No filtering will be applied if not set.
           schema:
             type: string
-          # example: "id,properties[priority]"
       responses:
         200:
           description: Expected response to a valid request
           content:
-            application/json:
+            application/vnd.example.public.v1+json:
               schema:
                 $ref: "#/components/schemas/Issue"
               examples:
