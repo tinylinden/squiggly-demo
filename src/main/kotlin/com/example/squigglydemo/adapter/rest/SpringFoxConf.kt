@@ -1,4 +1,4 @@
-package com.example.squigglydemo.adapter.api.rest
+package com.example.squigglydemo.adapter.rest
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -16,7 +16,7 @@ class SpringFoxConf {
     fun swaggerResourceProvider(): SwaggerResourcesProvider =
         SwaggerResourcesProvider {
             listOf(
-                swaggerResource("Squiggly Demo API (v1)", "3.0.0", "/public/squiggly-demo-api.v1.yaml")
+                swaggerResource("Squiggly Demo API (v1)", "3.0.0", "/public/specs/squiggly-demo-api.v1.yaml")
             )
         }
 
