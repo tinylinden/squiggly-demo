@@ -1,4 +1,4 @@
-package com.example.demo.adapter.api.rest
+package com.example.squigglydemo.adapter.api.rest
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.github.bohnman.squiggly.Squiggly

@@ -1,4 +1,4 @@
-package com.example.demo.adapter.api.rest
+package com.example.squigglydemo.adapter.api.rest
 
 data class Issue(
     val id: String,

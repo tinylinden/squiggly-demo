@@ -1,4 +1,4 @@
-package com.example.demo.adapter.api.rest
+package com.example.squigglydemo.adapter.api.rest
 
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
